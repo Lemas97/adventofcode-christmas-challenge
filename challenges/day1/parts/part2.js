@@ -2,10 +2,10 @@ import { getData } from '../../../functions/getData.js'
 async function main() {
   const data = await getData('1', 'data')
 
-  const splitted = data.split('\r\n')
+  const split = data.split('\r\n')
 
   const elfs = []
-  splitted.reduce((sum, next) => {
+  split.reduce((sum, next) => {
     if (!next) {
       elfs.push(sum)
       return 0
